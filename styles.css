@@ -64,3 +64,114 @@ img.content{
     width: 275px;
     height: 275px; 
 }
+a.top{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    margin: 3% 0% 2% 3%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+a.top:hover{
+    color: rgb(216, 198, 34);
+}
+button.notification{
+    border-radius: 50px;
+    border-width: 1px;
+    background-color: rgb(70, 203, 255);
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 25px;
+    left: 28%;
+    outline: none;
+}
+fieldset{
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 88%;
+    border-color:rgba(79, 78, 148, 0.74)
+}
+legend{
+    color:rgba(79, 78, 148, 0.74)
+}
+textarea{
+    border-radius: 5px;
+    overflow: auto;
+    float: right;
+    width: 350px;
+    height: 155px;
+}
+.accountLabel{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    position: relative;
+    bottom: 30px;
+    left: 125px;
+}
+.accDescrip{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 12px;
+    position: relative;
+    left: 50px;
+    bottom: 40px;
+}
+a.login{
+    float: right;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    position: relative;
+    bottom: 40px;
+    right: 10px;
+}
+.r{
+    float: left;
+}
+button.audio{
+    position: relative;
+    top: 65px;
+    left: 150px;
+    width: 45px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: seagreen;
+    border-width: 1px;
+    outline: none;
+}
+img.icon{
+    position: relative;
+    bottom: 4px;
+}
+button.video{
+    position: relative;
+    top: 65px;
+    left: 150px;
+    width: 45px;
+    height: 30px;
+    border-radius: 50px;
+    border-width: 1px;
+    background-color: steelblue;
+    outline: none;
+}
+#submit{
+    border-radius: 5px;
+    border-width: 1px;
+    height: 30px;
+    float: right;
+    position: relative;
+    right: 5px;
+    top: 100px;
+    outline: none;
+}
+#label1{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+}
+#label2{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    position: relative;
+    top: 30px;
+    right: 96px;
+}
+#label3{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    position: relative;
+    top: 60px;
+    right: 166px;
+}
