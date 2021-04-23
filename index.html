@@ -1,8 +1,42 @@
 <!DOCTYPE html>
-<head>
-  <title>
-  </title>
-</head>
-<body>
-</body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> CMS Front Page </title>
+        <link href="styles.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="footer">
+            <div class="accountSection">
+                <img class="account" src="images/Profile Icon 64.png" />
+                <p class="accountLabel"> User Profile </p>
+                
+                <p class="accDescrip"> You are currently log in as an anonymous user.</p>
+                <a class="login" href="login.html"> Login </a>
+            </div>
+
+            <div class="complaintSection">
+                <fieldset>
+                    <legend> Report Complaint </legend>
+                    <form>
+                        <div class="r">
+                            <label id="label1"><input id="radio1" type="radio" name="complaintType" value="Electricity" checked/> Electricity</label>
+                            <label id="label2"><input id="radio2" type="radio" name="complaintType" value="Water" /> Water</label>
+                            <label id="label3"><input id="radio3" type="radio" name="complaintType" value="Phone" /> Phone</label>
+                        </div>
+                        <textarea cols="31" rows="10">Write your complaint here...</textarea>
+                        <button class="audio"><img class="icon" src="images/Phone Icon 32.png" /></button>
+                        <button class="video"><img class="icon" src="images/Video Icon 32.png" /></button>
+                        <input id="submit" type="submit" value="Send Complaint" />
+                    </form>
+                </fieldset>
+            </div>
+
+            <div class="y">
+                
+            </div>
+        </div>
+    </body>
 </html>
