@@ -1,0 +1,35 @@
+div.container{
+    width: 30%;
+    height: 630px;
+    background-color: rgba(187, 198, 201, 0.589);
+    position: relative;
+    left: 35%;
+    border-radius: 20px;
+}
+img.logo{
+    position:relative;
+    left: 25%;
+    width: 200px;
+    height: 200px;
+}
+hr{
+    width: 350px;
+}
+h2{
+    text-indent: 20px;
+    font-family:'Segoe UI', Verdana, sans-serif
+}
+footer{
+    position: relative;
+    left: 60px;
+    top: 90px;
+}
+p{
+    text-indent: 10px;
+    position: relative;
+    bottom: 15px;
+}
+img.profilepic{
+    width: 25px;
+    height: 25px;
+}
