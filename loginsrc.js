@@ -21,7 +21,7 @@ function getInfo(e){
         window.location.href = "index.html";
     }
     if(empR.checked){
-        window.location.href = "employeepage.html";
+        window.location.href = "home.html";
     }
     if(admR.checked){
         window.location.href = "adminpage.html";
