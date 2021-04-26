@@ -21,7 +21,7 @@ p.desc{
 input.login{
     position: relative;
     top: 80px;
-    left: 500px;
+    left: 295px;
     width: 100px;
     background-color: rgb(56, 88, 185);
     height: 30px;
@@ -36,4 +36,8 @@ label.radio{
 label.empradio, label.adminradio{
     position: relative;
     left: 64px;
+}
+label.anon{
+    position: relative;
+    top: 70px;
 }

@@ -1,5 +1,6 @@
 let username = document.getElementById("Name");
 let billnumber = document.getElementById("BillNum");
+let anonoption = document.getElementById("anonOp");
 
 let userR = document.getElementById("user");
 let empR = document.getElementById("employee");
@@ -15,16 +16,19 @@ function getInfo(e){
         });
         
         if(userR.checked){
-            if(username.value.length > 0 &&
-                billnumber.value.length > 0){    
-                    localStorage.setItem("name", username.value);
-                    localStorage.setItem("bill", billnumber.value);
-                    localStorage.setItem("clear", "0");
-                    window.location.href = "index.html";
-                }
-                else{
-                    console.log("Hello");
-                }
+            if(!anonoption.checked){
+                if(username.value.length > 0 &&
+                    billnumber.value.length > 0){    
+                        localStorage.setItem("name", username.value);
+                        localStorage.setItem("bill", billnumber.value);
+                        localStorage.setItem("clear", "0");
+                        window.location.href = "index.html";
+                    }
+            }
+            else{
+                localStorage.clear();
+                window.location.href = "index.html";
+            }
         }
         else{
             let password = document.getElementById("pass");
