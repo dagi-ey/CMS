@@ -183,8 +183,8 @@ button.video{
     border-width: 1px;
     height: 30px;
     position: relative;
-    left: 150px;
-    top: 90px;
+    right: 190px;
+    top: 100px;
     outline: none;
 }
 #label1{
