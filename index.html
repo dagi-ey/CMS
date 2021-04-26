@@ -17,13 +17,20 @@
             <a class="top" href="complaintpage.html">Report Complaint</a>
             <a class="top" href="faqpage.html">FAQ</a>
             <a class="top" href="about.html">About</a>
-            <button class="material-icons notification">notifications </button> 
-            <span class="notif-num">3</span>
+            <div class="dropdown">
+                <button class="material-icons notification">notifications</button> 
+                <span class="notif-num">3</span>
+                <div class="dropdown-content">
+                    <p> No new notifications </p>
+                </div>
+            </div>
         </header>
 
         <div class="mainCont">
-            <img class="content" src="images/CMS_Logo.png">
-            <h1> We handle your Problems. Save Time. </h1>
+            <div>
+                <img class="content" src="images/CMS_Logo.png">
+                <h1> We handle your Problems. Save Time. </h1>
+            </div>
             <p class="Description"> We provide complaint services that are reliable and efficient so that you no longer have to 
                 worry about handling your problems. Invest your trust for our services and in no time reap the benefits. </p>
         </div>
@@ -36,7 +43,7 @@
                 <p class="accDescrip"> You are currently log in as an anonymous user.</p>
                 <a class="login" href="login.html"> Login </a>
             </div>
-
+            
             <div class="complaintSection">
                 <fieldset>
                     <legend> Report Complaint </legend>
@@ -46,15 +53,23 @@
                             <label id="label2"><input id="radio2" type="radio" name="complaintType" value="Water" /> Water</label>
                             <label id="label3"><input id="radio3" type="radio" name="complaintType" value="Phone" /> Phone</label>
                         </div>
-                        <textarea cols="31" rows="10">Write your complaint here...</textarea>
+                        
                         <button class="audio"><img class="icon" src="images/Phone Icon 32.png" /></button>
                         <button class="video"><img class="icon" src="images/Video Icon 32.png" /></button>
                         <input id="submit" type="submit" value="Send Complaint" />
                     </form>
+                    
                 </fieldset>
+                <textarea cols="31" rows="10" placeholder="Write your complaint here..."></textarea>
             </div>
 
-            <div class="y">
+            <div class="faqsection">
+                <h3> FAQs <hr /></h3>
+                <div class="faqlist"> FAQ Sample 1</div>
+                <div class="faqlist"> FAQ Sample 2</div>
+                <div class="faqlist"> FAQ Sample 3</div>
+
+                <a href="faqpage.html" class="afaq"> Show More </a>
                 
             </div>
         </div>
