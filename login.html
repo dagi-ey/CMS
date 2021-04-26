@@ -8,22 +8,24 @@
     <title>Login</title>
 </head>
 <body>
-    <h1>User Login</h1>
-    <p> Fill in the following requirements in order for the system to recognize who you are for future reference. </p>
-    <div class="fillinfo">
-        <form>
-            <div id="textinput">
-                <label for="Name"> User Name: </label><input id="Name" name="userinfo" type="text"> 
-                <label for="BillNum" id="billLab"> Bill Number: <input id="BillNum" name="userinfo" type="text"></label>
-            </div>
-            <div>
-                <label> Login as: <input name="userinfo2" id="user" class="userradio" type="radio" checked onclick="displaybill()"> <label for="user">User</label> 
-                                <input name="userinfo2" id="employee" class="empradio" type="radio" onclick="displaypass()"><label for="employee">Employee</label>
-                                <input name="userinfo2" id="admin" class="adminradio" type="radio" onclick="displaypass()"><label for="admin">Admin</label>
-                </label> 
-            </div>
-            <input name="userinfo" type="submit" value="Login" onclick="getInfo(event)">
-        </form>
+    <div class="container">
+        <h1>User Login</h1>
+        <p class="desc"> Fill in the information below. </p>
+        <div class="fillinfo">
+            <form>
+                <div id="textinput">
+                    <label for="Name"> User Name: </label><input id="Name" name="userinfo" type="text">
+                    <label for="BillNum" id="billLab"> Bill Number: <input id="BillNum" name="userinfo" type="text"></label>
+                </div>
+                <div>
+                    <label class="radio"> Login as: <input name="userinfo2" id="user" class="userradio" type="radio" checked onclick="displaybill()"> <label for="user">User</label> 
+                                    <div><label class="empradio" for="employee"><input name="userinfo2" id="employee" type="radio" onclick="displaypass()">Employee</label></div>
+                                    <div><label for="admin" class="adminradio"><input name="userinfo2" id="admin" type="radio" onclick="displaypass()">Admin</label></div>
+                    </label> 
+                </div>
+                <input name="userinfo" class="login" type="submit" value="Login" onclick="getInfo(event)">
+            </form>
+        </div>
     </div>
     <script src="loginsrc.js"></script>
 </body>
