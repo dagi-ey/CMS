@@ -14,9 +14,9 @@ div.mainCont{
 div.accountSection{
     background-color: rgba(187, 198, 201, 0.589);
     border-radius: inherit;
-    height: 200px;
+    height: inherit;
 }
-div.y{
+div.faqsection{
     background-color: rgba(187, 198, 201, 0.589);
     border-radius: inherit;
 }
@@ -24,6 +24,7 @@ div.complaintSection{
     background-color: rgba(187, 198, 201, 0.589);
     border-radius: inherit;
     font-family:'Segoe UI', Tahoma, sans-serif; 
+    height: inherit;
 }
 div.footer{
     display: grid;
@@ -38,22 +39,27 @@ h1{
     font-size: 40px;
     color:rgb(10, 11, 29);
     float: right;
-    position: fixed;
-    z-index: 10px;
-    top: 150px;
-    left: 300px;
+    position: relative;
+    bottom: 275px;
+    left: 425px;
 
 }
 p.Description{
     text-align: right;
     position: relative;
     top: 200px;
+    height: 40px;
 }
 h2{
     margin: 2.2% 0% 0% 0%;
     font-family:'Segoe UI', Tahoma, sans-serif;
     vertical-align: middle;
     color: rgb(255, 255, 255);
+}
+h3{
+    margin-left: 12px;
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    color:rgba(79, 78, 148, 0.74)
 }
 img.logo{
     padding: 0px 0px 0px 20px;
@@ -87,9 +93,6 @@ button.notification{
     background-color: rgb(70, 203, 255);
     width: 40px;
     height: 40px;
-    position: relative;
-    top: 25px;
-    left: 28%;
     outline: none;  
 }
 .notif-num {
@@ -104,7 +107,7 @@ button.notification{
     top: 20px;
     background: brown;
     border-radius: 50px;
-    display: flex;
+    display: none;
   }
 fieldset{
     border-radius: 10px;
@@ -119,10 +122,13 @@ legend{
 textarea{
     border-radius: 5px;
     overflow: auto;
-    float: right;
+    resize: none;
+    position: relative;
+    bottom: 170px;
+    left: 280px;
     width: 350px;
     height: 155px;
-}
+} 
 .accountLabel{
     font-family: 'Segoe UI', Tahoma, sans-serif;
     position: relative;
@@ -148,8 +154,8 @@ a.login{
 }
 button.audio{
     position: relative;
-    top: 65px;
-    left: 150px;
+    top: 80px;
+    right: 80px;
     width: 45px;
     height: 30px;
     border-radius: 50px;
@@ -163,8 +169,8 @@ img.icon{
 }
 button.video{
     position: relative;
-    top: 65px;
-    left: 150px;
+    top: 80px;
+    right: 80px;
     width: 45px;
     height: 30px;
     border-radius: 50px;
@@ -176,9 +182,8 @@ button.video{
     border-radius: 5px;
     border-width: 1px;
     height: 30px;
-    float: right;
     position: relative;
-    right: 5px;
+    right: 190px;
     top: 100px;
     outline: none;
 }
@@ -198,7 +203,7 @@ button.video{
     right: 166px;
 }
 @media(max-width: 500px){
-    textarea{
+    /* textarea{
         border-radius: 5px;
         overflow: auto;
         text-indent: 10px;
@@ -206,6 +211,51 @@ button.video{
         width: 350px;
         height: 155px;
         resize: none;
-        display: none;
-    }
+    } */
+}
+.faqlist{
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: rgb(141, 145, 150);
+    position: relative;
+    bottom: 10px;
+}
+.afaq{
+    float: right;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    top: 25px;
+    left: 28%;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+}
+.dropdown-content p{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown:hover .notification{
+    background-color: #0d2b3f;
 }
