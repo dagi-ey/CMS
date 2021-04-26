@@ -1,7 +1,3 @@
-//let express = require('express');
-//let mysql = require('mysql');
-//let app = express();
-
 let username = document.getElementById("Name");
 let billnumber = document.getElementById("BillNum");
 
@@ -9,40 +5,34 @@ let userR = document.getElementById("user");
 let empR = document.getElementById("employee");
 let admR = document.getElementById("admin");
 
-//let connection = mysql.createConnection({
-//    host: 'localhost',
-//    user: 'root',
-//    password: 'root',
-//    database: 'userdb'
-//});
-
-//connection.connect();
-
-//app.get('/', function(req, resp){
-
-//})
-
-//app.listen(1337);
 function getInfo(e){
     e.preventDefault();
+    // let employees;
+
+    // fetch("employees.json").then(results => results.json()).then(data => {
+        
+    //     // for(let i = 0; i < data.employees.length; i++){
+    //     //     employees.push(data.employees[i]);
+    //     // }
+    // });
     
     if(username.value.length > 0 &&
-        billnumber.value.length > 0 &&
-        phonenumber.value.length > 0 &&
-        emailAddress.value.length > 0){
-            
+        billnumber.value.length > 0){
+            if(userR.checked){
+                localStorage.setItem("name", username.value);
+                localStorage.setItem("bill", billnumber.value);
+                localStorage.setItem("clear", "0");
+                window.location.href = "index.html";
+            }
+            if(empR.checked){
+                window.location.href = "home.html";
+            }
+            if(admR.checked){
+                window.location.href = "adminpage.html";
+            }        
         }
     
-    if(userR.checked){
-        window.location.href = "index.html";
-    }
-    if(empR.checked){
-        window.location.href = "home.html";
-    }
-    if(admR.checked){
-        window.location.href = "adminpage.html";
-    }
-        
+           
 }
 
 function displaypass(){
@@ -85,3 +75,25 @@ function displaybill(){
         parent.appendChild(billInput);
     }
 }
+
+// let express = require('express');
+// let mysql = require('mysql');
+// let app = express();
+
+// let connection = mysql.createConnection({
+//    host: 'localhost',
+//    user: 'root',
+//    password: 'root',
+//    database: 'userdb'
+// });
+
+// connection.connect();
+
+// app.get('/', function(req, resp){
+
+// })
+
+// app.listen(5500,()=>{
+//     console.log("server is runnuing")
+// });
+
