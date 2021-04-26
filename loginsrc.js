@@ -21,7 +21,6 @@ function getInfo(e){
                     billnumber.value.length > 0){    
                         localStorage.setItem("name", username.value);
                         localStorage.setItem("bill", billnumber.value);
-                        localStorage.setItem("clear", "0");
                         window.location.href = "index.html";
                     }
             }
@@ -40,6 +39,7 @@ function getInfo(e){
                             if(username.value === employees[0][i].user && 
                                 password.value === employees[0][i].pass){
                                 isValid = true;
+                                localStorage.setItem("empName", username.value);
                                 window.location.href = "home.html";
                                 break;
                             }
