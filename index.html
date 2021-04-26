@@ -7,7 +7,6 @@
         <title> CMS Front Page </title>
         <link href="styles.css" rel="stylesheet" type="text/css">
         <link href="/Materialize/material-icons.css" rel="stylesheet" type="text/css">
-
     </head>
     <body>
         <header>
@@ -40,7 +39,7 @@
                 <img class="account" src="images/Profile Icon 64.png" />
                 <p class="accountLabel"> User Profile </p>
                 
-                <p class="accDescrip"> You are currently log in as an anonymous user.</p>
+                <p id="accDes" class="accDescrip"> You are currently log in as an anonymous user.</p>
                 <a class="login" href="login.html"> Login </a>
             </div>
             
@@ -73,6 +72,17 @@
                 
             </div>
         </div>
-        <script src="indexsrc.js"></script>
+        <script>
+            let clear = localStorage.getItem("clear");
+            if(clear === "0"){
+                let name = localStorage.getItem("name");
+                let bill = localStorage.getItem("bill");
+                document.getElementById("accDes").innerHTML = "User Name: " + name + "Bill Number: " + bill;
+            }
+            else{
+                localStorage.clear();
+            }
+            
+        </script>
     </body>
 </html>
