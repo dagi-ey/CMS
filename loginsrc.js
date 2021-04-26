@@ -7,32 +7,57 @@ let admR = document.getElementById("admin");
 
 function getInfo(e){
     e.preventDefault();
-    // let employees;
-
-    // fetch("employees.json").then(results => results.json()).then(data => {
+    let employees;
+    $.getJSON("employees.json", function (data) {
+        employees = [];
+        $.each(data, function (index, value) {
+            employees.push(value);        
+        });
         
-    //     // for(let i = 0; i < data.employees.length; i++){
-    //     //     employees.push(data.employees[i]);
-    //     // }
-    // });
-    
-    if(username.value.length > 0 &&
-        billnumber.value.length > 0){
-            if(userR.checked){
-                localStorage.setItem("name", username.value);
-                localStorage.setItem("bill", billnumber.value);
-                localStorage.setItem("clear", "0");
-                window.location.href = "index.html";
-            }
-            if(empR.checked){
-                window.location.href = "home.html";
-            }
-            if(admR.checked){
-                window.location.href = "adminpage.html";
-            }        
+        if(userR.checked){
+            if(username.value.length > 0 &&
+                billnumber.value.length > 0){    
+                    localStorage.setItem("name", username.value);
+                    localStorage.setItem("bill", billnumber.value);
+                    localStorage.setItem("clear", "0");
+                    window.location.href = "index.html";
+                }
+                else{
+                    console.log("Hello");
+                }
         }
-    
-           
+        else{
+            let password = document.getElementById("pass");
+            if(username.value.length > 0 && 
+                password.value.length > 0){
+                    let isValid = false;
+                    if(empR.checked){
+                        for(let i = 0; i < employees[0].length; i++){
+                            if(username.value === employees[0][i].user && 
+                                password.value === employees[0][i].pass){
+                                isValid = true;
+                                window.location.href = "home.html";
+                                break;
+                            }
+                        }
+                    }
+                    if(admR.checked){
+                        for(let i = 0; i < employees[1].length; i++){
+                            if(username.value === employees[1][i].user && 
+                                password.value === employees[1][i].pass){
+                                isValid = true;
+                                window.location.href = "adminpage.html";
+                                break;
+                            }
+                        }
+                    } 
+        
+                    if(!isValid){
+                        alert("Invalid username or password. Please try again");
+                    }
+                }
+        }
+    });           
 }
 
 function displaypass(){
