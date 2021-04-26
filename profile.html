@@ -40,7 +40,7 @@
 			  </a>
 
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			    <a class="dropdown-item" href="#">Logout</a>
+			    <a class="dropdown-item" href="login.html">Logout</a>
 			    
 			  </div>
 	    </div>
@@ -67,7 +67,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="exampleInputPassword1">Employee Name</label>
-				    <input readonly type="text" class="form-control" id="exampleInputPassword1" placeholder="Jane Doe">
+				    <input readonly type="text" class="form-control" id="employeeName" placeholder="Jane Doe">
 				  </div>
 
 				  <div class="form-group">
@@ -103,7 +103,7 @@
 
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Email address</label>
-					    <input  type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" value="janedoe@gmail.com">
+					    <input  type="email" class="form-control" id="employeeEmail" aria-describedby="emailHelp" placeholder="" value="janedoe@gmail.com">
 					   
 					  </div>
 					  <div class="form-group">
@@ -136,6 +136,15 @@
 
 		
 	</div>
-
+	<script>
+		let empName = localStorage.getItem("empName");
+		let input = document.getElementById("employeeName");
+		let email = document.getElementById("employeeEmail");
+		
+		input.setAttribute("placeholder", empName);
+		email.setAttribute("value", empName + "@gmail.com");
+		document.getElementById("dropdownMenuLink").innerHTML = empName;
+		
+	</script>
 </body>
 </html>
