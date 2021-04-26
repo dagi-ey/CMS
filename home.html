@@ -40,7 +40,7 @@
 			  </a>
 
 			  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-			    <a class="dropdown-item" href="#">Logout</a>
+			    <a class="dropdown-item" href="login.html">Logout</a>
 			    
 			  </div>
 			</div>
@@ -52,18 +52,18 @@
 	<div class="container">
 		
 		<div class="text-center"  style="margin-top: 200px;">
-			<h1>Welcome {user}</h1>
+			<h1 id="welcome">Welcome {user}</h1>
 			<p>Here is some of the new updates waiting for you.</p>
 		</div>
 
 		<div class="row" style="margin-top: 200px;">
 			<div class="col col-lg-4 col-md-4 col-sm-6">
 				<!-- section 1 -->
-				<h4 class="my-2">new Complains</h4>
+				<h4 class="my-2">New Complaints</h4>
 				<div class="card my-4" style="width: 18rem;">
 				  <div class="card-body">
-				    <h5 class="card-title">Complain title</h5>
-				    <h6 class="card-subtitle mb-2 text-muted">Complain description</h6>
+				    <h5 class="card-title">Complaint Title</h5>
+				    <h6 id="new1" class="card-subtitle mb-2 text-muted">Complaint Description</h6>
 				    <a href="#" class="card-link">
 				    	<button class="btn btn-primary">Show Details</button>
 				    </a>
@@ -71,8 +71,8 @@
 				</div>
 				<div class="card my-4" style="width: 18rem;">
 				  <div class="card-body">
-				    <h5 class="card-title">Complain title</h5>
-				    <h6 class="card-subtitle mb-2 text-muted">Complain description</h6>
+				    <h5 class="card-title">Complaint Title</h5>
+				    <h6 id="new2" class="card-subtitle mb-2 text-muted">Complaint Description</h6>
 				    <a href="#" class="card-link">
 				    	<button class="btn btn-primary">Show Details</button>
 				    </a>
@@ -81,11 +81,11 @@
 			</div>
 			<div class="col col-lg-4 col-md-4 col-sm-6">
 				<!-- section 2 -->
-				<h4 class="my-2">Ongoing Complains</h4>
+				<h4 class="my-2">Ongoing Complaints</h4>
 				<div class="card my-4" style="width: 18rem;">
 				  <div class="card-body">
-				    <h5 class="card-title">Complain title</h5>
-				    <h6 class="card-subtitle mb-2 text-muted">Complain descriptionription</h6>
+				    <h5 class="card-title">Complaint title</h5>
+				    <h6 id="current1" class="card-subtitle mb-2 text-muted">Complaint Description</h6>
 				    <a href="#" class="card-link">
 				    	<button class="btn btn-primary">Show Details</button>
 				    </a>
@@ -93,8 +93,8 @@
 				</div>
 				<div class="card my-4" style="width: 18rem;">
 				  <div class="card-body">
-				    <h5 class="card-title">Complain title</h5>
-				    <h6 class="card-subtitle mb-2 text-muted">Complain description</h6>
+				    <h5 class="card-title">Complaint title</h5>
+				    <h6 id="current2" class="card-subtitle mb-2 text-muted">Complaint description</h6>
 				    <a href="#" class="card-link">
 				    	<button class="btn btn-primary">Show Details</button>
 				    </a>
@@ -102,8 +102,8 @@
 				</div>
 				<div class="card my-4" style="width: 18rem;">
 				  <div class="card-body">
-				    <h5 class="card-title">Complain title</h5>
-				    <h6 class="card-subtitle mb-2 text-muted">Complain description</h6>
+				    <h5 class="card-title">Complaint title</h5>
+				    <h6 id="current3" class="card-subtitle mb-2 text-muted">Complaint Description</h6>
 				    <a href="#" class="card-link">
 				    	<button class="btn btn-primary">Show Details</button>
 				    </a>
@@ -112,11 +112,11 @@
 			</div>
 			<div class="col col-lg-4 col-md-4 col-sm-6">
 				<!-- section 3 -->
-				<h4 class="my-2">finished Complains</h4>
+				<h4 class="my-2">Finished Complaints</h4>
 				<div class="card my-4" style="width: 18rem;">
 				  <div class="card-body">
-				    <h5 class="card-title">Complain title</h5>
-				    <h6 class="card-subtitle mb-2 text-muted">Complain description</h6>
+				    <h5 class="card-title">Complaint Title</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Complaint Description</h6>
 				    <a href="#" class="card-link">
 				    	<button class="btn btn-danger">Show Details</button>
 				    </a>
@@ -124,8 +124,8 @@
 				</div>
 				<div class="card my-4" style="width: 18rem;">
 				  <div class="card-body">
-				    <h5 class="card-title">Complain title</h5>
-				    <h6 class="card-subtitle mb-2 text-muted">Complain description</h6>
+				    <h5 class="card-title">Complaint title</h5>
+				    <h6 class="card-subtitle mb-2 text-muted">Complaint Description</h6>
 				    <a href="#" class="card-link">
 				    	<button class="btn btn-danger">Show Details</button>
 				    </a>
@@ -133,10 +133,27 @@
 				</div>
 			</div>
 		</div>
-		
-
-
 	</div>
-
+	<script>
+		let empName = localStorage.getItem("empName");
+		document.getElementById("dropdownMenuLink").innerHTML = empName;
+		document.getElementById("welcome").innerHTML = "Welcome " + empName;
+		
+		let complaints = JSON.parse(localStorage.getItem("complaint"));
+		if(complaints !== null){
+			document.getElementById("new1").innerHTML = complaints[complaints.length - 1];
+			document.getElementById("current1").innerHTML = complaints[0];
+			if(complaints.length >= 3){
+				document.getElementById("new2").innerHTML = complaints[complaints.length - 2];	
+				document.getElementById("current2").innerHTML = complaints[1];
+				document.getElementById("current3").innerHTML = complaints[2];
+			}
+			else if(complaints.length >= 2){
+				document.getElementById("new2").innerHTML = complaints[complaints.length - 2];	
+				document.getElementById("current2").innerHTML = complaints[1];
+			}
+		}
+		
+	</script>
 </body>
 </html>

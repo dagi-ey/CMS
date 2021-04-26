@@ -56,11 +56,11 @@
                         
                         <button class="audio"><img class="icon" src="images/Phone Icon 32.png" /></button>
                         <button class="video"><img class="icon" src="images/Video Icon 32.png" /></button>
-                        <input id="submit" type="submit" value="Send Complaint" />
+                        <input id="submit" type="submit" value="Send Complaint" onclick=getComplaint() />
                     </form>
                     
                 </fieldset>
-                <textarea cols="31" rows="10" placeholder="Write your complaint here..."></textarea>
+                <textarea id="complaint" cols="31" rows="10" placeholder="Write your complaint here..."></textarea>
             </div>
 
             <div class="faqsection">
@@ -73,18 +73,14 @@
                 
             </div>
         </div>
+        <script src="indexsrc.js"></script>
         <script>
-            let clear = localStorage.getItem("clear");
-            if(clear === "0"){
-                let name = localStorage.getItem("name");
-                let bill = localStorage.getItem("bill");
-                document.getElementById("accDes").innerHTML = "User Name: " + name;
+            let uname = localStorage.getItem("name");
+            let bill = localStorage.getItem("bill");
+            if(uname !== null){
+                document.getElementById("accDes").innerHTML = "User Name: " + uname;
                 document.getElementById("billDes").innerHTML =  "Bill Number: " + bill;
             }
-            else{
-                localStorage.clear();
-            }
-            
         </script>
     </body>
 </html>
