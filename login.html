@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="loginstyles.css" type="text/css">
     <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,7 +16,7 @@
             <form>
                 <div id="textinput">
                     <label for="Name"> User Name: </label><input id="Name" name="userinfo" type="text">
-                    <label for="BillNum" id="billLab"> Bill Number: <input id="BillNum" name="userinfo" type="text"></label>
+                    <label for="BillNum" id="billLab"> Bill Number: </label><input id="BillNum" name="userinfo" type="text">
                 </div>
                 <div>
                     <label class="radio"> Login as: <input name="userinfo2" id="user" class="userradio" type="radio" checked onclick="displaybill()"> <label for="user">User</label> 
