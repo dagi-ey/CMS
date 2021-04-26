@@ -146,8 +146,15 @@ a.login{
     float: right;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     position: relative;
-    bottom: 40px;
+    bottom: 70px;
     right: 10px;
+}
+p.billDescrip{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 12px;
+    left: 5px;
+    position: relative;
+    bottom: 50px;
 }
 .r{
     float: left;
