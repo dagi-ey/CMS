@@ -18,9 +18,9 @@
         <a class="top" href="about.html">About</a>
         <div class="dropdown">
             <button class="material-icons notification">notifications</button> 
-            <span class="notif-num">3</span>
-            <div class="dropdown-content">
-                <p> No new notifications </p>
+            <span id="span" class="notif-num">3</span>
+            <div id="notif" class="dropdown-content">
+                <p id="defaultnotif"> No new notifications </p>
             </div>
         </div>
     </header>
@@ -71,13 +71,41 @@
             <legend>
                 Report Complaint
             </legend>
-            <textarea cols="31" rows="10" placeholder="Write your complaint here..."></textarea>
+            <textarea id="complaint" cols="31" rows="10" placeholder="Write your complaint here..."></textarea>
             <div class="submit">
-                <p>Insert Schedule (Optional):  <input class="date" type="date"></p>
+                <form>
+                    <p>Insert Schedule (Optional):  <input class="date" type="date"></p>
                
-                <button class="sendComp">Send Complaint</button>
+                    <button class="sendComp" onclick="getComplaint()">Send Complaint</button>
+                </form>
             </div>
         </fieldset>
     </div>
+    <script src="indexsrc.js"></script>
+    <script>
+        let notifNum = localStorage.getItem("notification");
+
+        let notifcation = document.getElementById("notif");
+        let notifDefault = document.getElementById("defaultnotif");
+        let span = document.getElementById("span");
+
+        if(notifNum !== null){
+            notifcation.removeChild(notifDefault);
+                
+            for(let i = 0; i < parseInt(notifNum); i++){
+                let p = document.createElement("p");
+                let t = document.createTextNode("The complaint has been sent successfully.");
+                    
+                p.appendChild(t);
+                notifcation.appendChild(p);
+            }
+            span.innerHTML = notifNum;
+            span.style.display = "flex";
+        }
+        else{
+            span.style.display = "none";
+        }
+
+    </script>
 </body>
 </html>

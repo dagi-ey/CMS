@@ -67,8 +67,8 @@ button.notification{
     height: 20px;
     width: 20px;
     position: relative;
-    left: 27%;
-    top: 20px;
+    left: 70%;
+    bottom: 50px;
     background: brown;
     border-radius: 50px;
     display: none;
