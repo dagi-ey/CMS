@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/loginstyles.css" type="text/css">
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Login</h1>
+        <p class="desc"> Fill in the information below. </p>
+        <div class="fillinfo">
+            <form action="/login" method="POST">
+                <div id="textinput">
+                    <label for="Name"> User Name: </label><input id="Name" name="name" type="text">
+                    <label for="BillNum" id="billLab"> Bill Number: </label><input id="BillNum" name="bill" type="text">
+                </div>
+                <div>
+                    <label class="radio"> Login as: <input name="radio" id="user" class="userradio" value="user" type="radio" checked onclick="displaybill()"> <label for="user">User</label> 
+                    <div><label class="empradio" for="employee"><input name="radio" id="employee" type="radio" value="employee" onclick="displaypass()">Employee</label></div>
+                    <div><label for="admin" class="adminradio"><input name="radio" id="admin" type="radio" value="admin" onclick="displaypass()">Admin</label></div>
+                    </label> 
+                </div>
+                
+                <label class="anon"><input name="anon" id="anonOp" type="checkbox">Login as an anonymous user </label>
+                <button name="userinfo" class="login" type="submit" onclick="anonCheck()">Login </button>
+            </form>
+            <a href="/register">Register</a>
+            <h4><%if (Message !== null) %> 
+                <%= Message%>
+            </h4>
+        </div>
+    </div>
+    <script src="/loginsrc.js"></script>
+</body>
+</html>

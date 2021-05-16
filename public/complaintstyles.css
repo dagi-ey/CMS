@@ -1,0 +1,179 @@
+header{
+    display: flex;
+    background-color:rgb(10, 11, 29);
+    border-radius: 50px;
+}
+div.option{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left: 30px;
+}
+fieldset{
+    height: 210px;
+    display: flex;
+    width: 1280px;
+}
+textarea{
+    position: relative;
+    right: 50px;
+    resize: none;
+    height: 180px;
+    width: 900px;    
+}
+div.submit{
+    position: relative;
+    left: 50px;
+}
+p.date{
+    position: relative;
+    right: 90px;
+    float: right;
+}
+input.date{
+    position: relative;
+    bottom: 5px;
+    float: right;
+}
+button.sendComp{
+    margin-left: 20px;
+    height: 50px;
+    border-radius: 20px;
+    border-width: 1px;
+    float: right;
+    position: relative;
+    bottom: 45px;
+    right: 60px;
+}
+img.logo{
+    padding: 0px 0px 0px 20px;
+    width: 100px;
+    height: 100px;
+}
+h2{
+    margin: 2.2% 0% 0% 0%;
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    vertical-align: middle;
+    color: rgb(255, 255, 255);
+}
+a.top{
+    font-family:'Segoe UI', Tahoma, sans-serif;
+    margin: 3% 0% 2% 3%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+a.top:hover{
+    color: rgb(216, 198, 34);
+}
+button.notification{
+    border-radius: 50px;
+    border-width: 1px;
+    background-color: rgb(70, 203, 255);
+    width: 40px;
+    height: 40px;
+    outline: none;  
+}
+.notif-num {
+    text-indent: 6px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 15px;
+    height: 20px;
+    width: 20px;
+    position: relative;
+    left: 70%;
+    bottom: 50px;
+    background: brown;
+    border-radius: 50px;
+    display: none;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    top: 25px;
+    left: 28%;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+}
+.dropdown-content p{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover{
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown:hover .notification{
+    background-color: #0d2b3f;
+}
+img.provico{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 10px;
+    left: 40%;
+}
+.phone{
+    width: 33%;
+    height: 300px;
+    background-color: rgb(230,230,230);
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.water{
+    width: 33%;
+    height: 300px;
+    background-color: rgb(230,230,230);
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.electricity{
+    width: 33%;
+    height: 300px;
+    background-color: rgb(230,230,230);
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+.providers{
+    display: flex;
+}
+button.audio{
+    position: relative;
+    top: 60px;
+    left: 180px;
+    width: 45px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: seagreen;
+    border-width: 1px;
+    outline: none;
+}
+img.icon{
+    position: relative;
+    bottom: 4px;
+}
+button.video{
+    position: relative;
+    top: 60px;
+    left: 180px;
+    width: 45px;
+    height: 30px;
+    border-radius: 50px;
+    border-width: 1px;
+    background-color: steelblue;
+    outline: none;
+}

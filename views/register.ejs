@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/registerstyles.css" type="text/css">
+    <title>Register</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <p class="desc"> Fill in the information below. </p>
+        <div class="fillinfo">
+            <form action="/register" method="POST">
+                <div id="textinput">
+                    <label for="Name"> User Name: </label><input id="Name" name="name" type="text">
+                    <div><label for="Password" id="passLab"> Password: </label><input id="Password" name="pass" type="text"></div>
+                    <div><label for="confirmPassword" id="cpassLab"> Confirm Password: </label> <input id = "confirmPassword" name="cPass" type="text"></div>
+                </div>
+                <div class="radio">
+                    <label> Register as: <label class="empradio" for="employee"><input name="radio" id="employee" type="radio" value="employee" checked>Employee</label> 
+                    <div><label for="admin" class="adminradio"><input name="radio" id="admin" type="radio" value="admin">Admin</label></div>
+                    </label> 
+                </div>
+
+                <button name="userinfo" class="register" type="submit">Register </button>
+            </form>
+            <a href="/login">Login</a>
+            <h4><%if (Message !== null) %> 
+                <%= Message%>
+            </h4>
+        </div>
+    </div>
+</body>
+</html>

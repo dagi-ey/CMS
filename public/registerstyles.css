@@ -1,0 +1,81 @@
+div.container{
+    position: relative;
+    border-radius: 20px;
+    left: 350px;
+    width: 600px;
+    height: 300px;
+    background-color:silver;
+}
+#textinput{
+    position: relative;
+    left: 50px;
+}
+#Name{
+    position: relative;
+    left: 57px;
+}
+#Password{
+    position: relative;
+    left: 68px;
+    top: 2px;
+}
+#confirmPassword{
+    position: relative;
+    left: 10px;
+    top: 4px;
+}
+#passLab{
+    position: relative;
+    top: 2px;
+}
+#cpassLab{
+    position: relative;
+    top: 4px;
+}
+.radio{
+    position: relative;
+    top: 20px;
+    left: 200px;
+}
+h1{
+    background-color: royalblue;
+    border-radius: 20px;
+    text-indent: 10px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color:seashell
+}
+p.desc{
+    position: relative;
+    left: 40px;
+    font-size: 20px;
+}
+button.register{
+    position: relative;
+    top: 60px;
+    left: 500px;
+    width: 100px;
+    background-color: rgb(56, 88, 185);
+    height: 30px;
+    color: seashell;
+    border-radius: 20px;
+    border-width: 1px;
+}
+label.adminradio{
+    position: relative;
+    left: 79px;
+}
+a{
+    position: relative;
+    left: 430px;
+    top: 35px;
+}
+h4{
+    position: relative;
+    top: 25px;
+    left: 7px;
+    background-color: brown;
+    color: white;
+    width: 590px;
+    border-radius: 10px;
+    text-indent: 10px;
+}
